@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phonie</title>
+    <link rel="stylesheet" href="Project.css">
+</head>
+
+<body>
+    <div class="signup-form">
+        <form action="" method="post" class="form">
+            <div class="page-header">
+                <h2>Sign Up</h2>
+                <h4>Please sign up and check the service provider of any Nigerian mobile phone number!</h4>
+            </div>
+            <hr>
+            <div class="page-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label for="name"></label>
+                            <input type="text" 
+                                class="form-control" 
+                                name="first_name" 
+                                placeholder="First Name" 
+                                required 
+                                id="name">
+                        </div>
+                        <div class="col">
+                            <label for="last_name"></label>
+                            <input type="text" 
+                                class="form-control" 
+                                name="last_name" 
+                                placeholder="Last Name" 
+                                required 
+                                id="last_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-field">
+                    <div class="input-field phone-one">
+                        <label for="phone_number"></label>
+                        <input type="tel" 
+                            class="number" 
+                            id="phone_number" 
+                            name="phone_number" 
+                            placeholder="Number" 
+                            required 
+                            list="defaultTels" 
+                            oninput="addCarrierImageOnInput()" 
+                            minlength=11
+                            maxlength=17>
+                        <div class="error"></div>
+                        <datalist id="defaultTels">
+                            <option value="0803"></option>
+                            <option value="0703"></option>
+                            <option value="0806"></option>
+                            <option value="0706"></option>
+                            <option value="0813"></option>
+                            <option value="0816"></option>
+                            <option value="0810"></option>
+                            <option value="0814"></option>
+                            <option value="0903"></option>
+                            <option value="0906"></option>
+                            <option value="0909"></option>
+                            <option value="0809"></option>
+                            <option value="0818"></option>
+                            <option value="0817"></option>
+                            <option value="0908"></option>
+                            <option value="0805"></option>
+                            <option value="0807"></option>
+                            <option value="0705"></option>
+                            <option value="0815"></option>
+                            <option value="0811"></option>
+                            <option value="0905"></option>
+                            <option value="0701"></option>
+                            <option value="0708"></option>
+                            <option value="0802"></option>
+                            <option value="0808"></option>
+                            <option value="0812"></option>
+                            <option value="0902"></option>
+                            <option value="0901"></option>
+                            <option value="0704"></option>
+                            <option value="0904"></option>
+                            <option value="07025"></option>
+                            <option value="07026"></option>
+                            <option value="0913"></option>
+                            <option value="0916"></option>
+                            <option value="0915"></option>
+                            <option value="0912"></option>
+                        </datalist>
+                    </div>
+                    <div class="phone-two">
+                        <img alt ="" id="carrier" src="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password"></label>
+                    <input type="password" 
+                        class="form-control" 
+                        name="password" 
+                        placeholder="Password" 
+                        required="required" 
+                        minlength=8 
+                        id="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword"></label>
+                    <input type="password" 
+                        class="form-control" 
+                        name="confirm_password" 
+                        placeholder="Confirm Password" 
+                        required="required" 
+                        minlength=8 
+                        id="confirmPassword" 
+                        onchange="checkPassword()">
+                </div>
+                <p id="message"></p>
+            </div>
+            <button type="submit" class="button" id="button">SIGN UP</button>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    
+
+</body>
+
+
+</html>
